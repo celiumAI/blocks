@@ -33,13 +33,13 @@ void setup() {
 
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {
     // check out /docs/endpoints/root.md for more information
-    String response = "<html><body><p>Hi! you have reached the root. Have a great day</p></body></html>"
+    String response = "<html><body><p>Hi! you have reached the root. Have a great day</p></body></html>";
     Serial.println(response);
     request->send(200, "text/plain", response);
   });
 
-  // /docs/endpoints/heartbeat.md
 
+  // /docs/endpoints/node.md
   // /docs/endpoints/node/id.md
   // /docs/endpoints/node/name.md
   // /docs/endpoints/node/timestamp.md

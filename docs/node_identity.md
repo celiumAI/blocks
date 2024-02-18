@@ -40,8 +40,21 @@ this leads to the following simple schema
 in cpp it would be simply constants like this for the root node:
 
 ```cpp
-const char* NODE_ID="d96f5ea3-1ba0-4d33-8f9f-b93563cc936f";
-const char* NODE_NAME="root";
-const char* NODE_ORIGIN="m-c-frank/celium-experiments";
-const int NODE_TIMESTAMP="REPLACEME";
+struct Node {
+  String id;
+  String name;
+  String timestamp;
+  String origin;
+};
+
+Node root = {
+    "rootroot-1ba0-4d33-8f9f-b93563cc936f",
+    "root",
+    "REPLACEME",
+    "m-c-frank/celium-experiments",
+};
+
+String nodeToString(Node node){
+    return "id: " + node.id + ", name: " + node.name + ", timestamp: " + node.timestamp + ", origin: " + node.origin;
+}
 ```

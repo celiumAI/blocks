@@ -4,8 +4,8 @@ the loop calls the function that makes the [heartbeat pulse post request](./hear
 
 but will probably also be used for interesting timing experiments
 
-for now we just need to call heartbeat
+for now we just ignore it
 
 ```cpp
-    sendHeartbeat();
+// nothing to see here yet
 ```

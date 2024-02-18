@@ -44,3 +44,7 @@ stamped_script = raw_script.replace("REPLACEME", str(timestamp))
 print(stamped_script)
 
 # %%
+
+with open(base_dir + "src/main.cpp", "w") as file:
+    file.write(stamped_script)
+# %%
