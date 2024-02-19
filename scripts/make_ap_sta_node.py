@@ -47,12 +47,16 @@ print(stamped_script)
 # load dotenv
 from dotenv import load_dotenv
 import os
-load_dotenv(dotenv_path=base_dir + '.env.root')
+load_dotenv(dotenv_path=base_dir + '.env')
 
 print(os.getenv("AP_SSID"))
 print(os.getenv("AP_PASSWORD"))
 stamped_script = stamped_script.replace("THIS_NODES_AP_SSID", os.getenv("AP_SSID"))
 stamped_script = stamped_script.replace("THIS_NODES_AP_PASSWORD", os.getenv("AP_PASSWORD"))
+print(os.getenv("PARENT_AP_SSID"))
+print(os.getenv("PARENT_AP_PASSWORD"))
+stamped_script = stamped_script.replace("PARENT_AP_SSID", os.getenv("PARENT_AP_SSID"))
+stamped_script = stamped_script.replace("PARENT_AP_PASSWORD", os.getenv("PARENT_AP_PASSWORD"))
 
 print(stamped_script)
 # %%

@@ -2,10 +2,18 @@
 
 authentication will be done with a hardcoded token
 
-this token is a private key and we will have our central certificate authority set up aswell.
+this node owns its private key and eventually this will be handled better.
 
 we will implement it as a simple hardcoded string
 
 ```cpp
-const char* AUTH_TOKEN="super secret root key";
+const char* PRIVATE_KEY="THIS_NODES_PRIVATE_KEY";
 ```
+
+## using python script
+
+if you use the python script to write the cpp file
+
+you need to define the actual private key in the .env
+
+for now this will be disabled.

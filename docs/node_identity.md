@@ -55,6 +55,12 @@ Node root = {
 };
 
 String nodeToString(Node node){
-    return "id: " + node.id + ", name: " + node.name + ", timestamp: " + node.timestamp + ", origin: " + node.origin;
+    String json = "{";
+    json += "\"id\": \"" + node.id + "\", ";
+    json += "\"name\": \"" + node.name + "\", ";
+    json += "\"timestamp\": \"" + node.timestamp + "\", ";
+    json += "\"origin\": \"" + node.origin + "\"";
+    json += "}";
+    return json;
 }
 ```

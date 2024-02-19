@@ -1,6 +1,6 @@
 # node
 
-the /node endpoints returns basic information on the node itself
+the /node endpoints returns basic information on the node itself as a json string
 
 this information is actually hardcoded on the d1 mini
 

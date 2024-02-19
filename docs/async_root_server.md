@@ -10,8 +10,8 @@ the async server is used to display the home page but also allow for the chattin
 #include <ESPAsyncWebServer.h>
 
 
-const char* ssid = "root";
-const char* password = "REPLACE_WITH_YOUR_PASSWORD";
+const char* ap_ssid = "THIS_NODES_AP_SSID";
+const char* ap_password = "THIS_NODES_AP_PASSWORD";
 
 AsyncWebServer server(80);
 
@@ -22,7 +22,7 @@ AsyncWebServer server(80);
 void setup() {
   Serial.begin(115200);
   
-  WiFi.begin(ssid, password);
+  WiFi.begin(ap_ssid, ap_password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.println("Connecting to WiFi..");
@@ -40,10 +40,6 @@ void setup() {
 
 
   // /docs/endpoints/node.md
-  // /docs/endpoints/node/id.md
-  // /docs/endpoints/node/name.md
-  // /docs/endpoints/node/timestamp.md
-  // /docs/endpoints/node/origin.md
 
   server.begin();
 }
