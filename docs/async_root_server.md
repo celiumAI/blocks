@@ -10,8 +10,8 @@ the async server is used to display the home page but also allow for the chattin
 #include <ESPAsyncWebServer.h>
 
 
-const char* ap_ssid = "THIS_NODES_AP_SSID";
-const char* ap_password = "THIS_NODES_AP_PASSWORD";
+const char* ap_ssid = "THIS_NODE_AP_SSID";
+const char* ap_password = "THIS_NODE_AP_PASSWORD";
 
 AsyncWebServer server(80);
 

@@ -15,8 +15,8 @@ as long as the d1 mini has power
 we can connect to it via its own access point
 
 ```cpp
-    const char* ap_ssid = "THIS_NODES_AP_SSID";
-    const char* ap_password = "THIS_NODES_AP_PASSWORD";
+    const char* ap_ssid = "THIS_NODE_AP_SSID";
+    const char* ap_password = "THIS_NODE_AP_PASSWORD";
 
     WiFi.softAP(ap_ssid, ap_password);
     IPAddress myIP = WiFi.softAPIP();

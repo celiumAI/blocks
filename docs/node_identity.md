@@ -48,10 +48,10 @@ struct Node {
 };
 
 Node root = {
-    "rootroot-1ba0-4d33-8f9f-b93563cc936f",
-    "root",
-    "REPLACEME",
-    "m-c-frank/celium-experiments",
+    "THIS_NODE_ID",
+    "THIS_NODE_NAME",
+    "THIS_NODE_TIMESTAMP",
+    "THIS_NODE_ORIGIN",
 };
 
 String nodeToString(Node node){

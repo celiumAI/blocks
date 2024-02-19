@@ -7,7 +7,7 @@ this node owns its private key and eventually this will be handled better.
 we will implement it as a simple hardcoded string
 
 ```cpp
-const char* PRIVATE_KEY="THIS_NODES_PRIVATE_KEY";
+const char* PRIVATE_KEY="THIS_NODE_PRIVATE_KEY";
 ```
 
 ## using python script

@@ -27,7 +27,7 @@ def get_code_block(docs_path: str, language: str = 'cpp'):
     return code_block
 # %%
 base_dir = "/home/mcfrank/celium-experiments/product_demos/blocks/"
-doc_path = base_dir + "docs/physical_nodes/root_node.md"
+doc_path = base_dir + "docs/modules/root_node.md"
 print(doc_path)
 
 raw_script = get_code_block(doc_path)
@@ -35,28 +35,34 @@ raw_script = get_code_block(doc_path)
 print(raw_script)
 
 # %%
-import time
-
-timestamp = int(time.time())*1000
-
-stamped_script = raw_script.replace("REPLACEME", str(timestamp))
-
-print(stamped_script)
-
 # %%
 # load dotenv
 from dotenv import load_dotenv
 import os
 load_dotenv(dotenv_path=base_dir + '.env.root')
 
+print(os.getenv("THIS_NODE_TIMESTAMP"))
+stamped_script = raw_script.replace("THIS_NODE_TIMESTAMP", os.getenv("NODE_TIMESTAMP"))
+print(os.getenv("NODE_ID"))
+stamped_script = stamped_script.replace("THIS_NODE_ID", os.getenv("NODE_ID"))
+
+print(os.getenv("NODE_NAME"))
+stamped_script = stamped_script.replace("THIS_NODE_NAME", os.getenv("NODE_NAME"))
+
+print(os.getenv("NODE_ORIGIN"))
+stamped_script = stamped_script.replace("THIS_NODE_ORIGIN", os.getenv("NODE_ORIGIN"))
+
 print(os.getenv("AP_SSID"))
+stamped_script = stamped_script.replace("THIS_NODE_AP_SSID", os.getenv("AP_SSID"))
+
 print(os.getenv("AP_PASSWORD"))
-stamped_script = stamped_script.replace("THIS_NODES_AP_SSID", os.getenv("AP_SSID"))
-stamped_script = stamped_script.replace("THIS_NODES_AP_PASSWORD", os.getenv("AP_PASSWORD"))
+stamped_script = stamped_script.replace("THIS_NODE_AP_PASSWORD", os.getenv("AP_PASSWORD"))
 
 print(stamped_script)
+
+
 # %%
 
-with open(base_dir + 'src/main.cpp', 'w') as f:
+with open(base_dir + 'src/root_node_generated.cpp', 'w') as f:
     f.write(stamped_script)
 # %%

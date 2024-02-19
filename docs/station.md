@@ -5,8 +5,8 @@ from what i have gathered any device connected to an access point is called a st
 you can let a D1 Mini behave like a station by connecting to an access point like this:
 
 ```cpp
-const char* parent_ssid = "PARENT_AP_SSID";
-const char* parent_password = "PARENT_AP_PASSWORD";
+const char* parent_ssid = "THIS_PARENT_AP_SSID";
+const char* parent_password = "THIS_PARENT_AP_PASSWORD";
 
 WiFi.begin(parent_ssid, parent_password);
 
